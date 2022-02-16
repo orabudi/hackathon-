@@ -1,0 +1,22 @@
+{
+  "Users": [
+    {
+      "Id": "6b86b273",
+      "Name": "RonGoldberg",
+      "Password": "Aa123456!",
+      "Type": "Manager"
+    },
+    {
+      "Id": "d4735e3a2",
+      "Name": "Yohay Splendor",
+      "Password": "mySQL",
+      "Type": "Collector"
+    },
+    {
+      "Id": "4e074085",
+      "Name": "Ron Benaccot",
+      "Password": "Bb123456123456",
+      "Type": "Administrator"
+    }
+  ]
+}
