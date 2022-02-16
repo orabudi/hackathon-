@@ -1,34 +1,34 @@
 {
-  "Regestries": [
+  "regestries": [
     {
-      "Name": "Jerusalem 1",
-      "Id":  1,
+      "name": "Jerusalem 1",
+      "id":  1,
       "city": "Jerusalem",
-      "Address": "Queen Shlomziyon St 20",
-      "Capacity": 800,
-      "Current Amount": 500,
-      "Update date": "16.02.2022 17:00:00",
-      "Last Collected": "12.02.2022 14:00:00"
+      "address": "Queen Shlomziyon St 20",
+      "capacity": 800,
+      "currentAmount": 500,
+      "updateDate": "16.02.2022 17:00:00",
+      "lastCollected": "12.02.2022 14:00:00"
     },
     {
-      "Name": "Tel Aviv 1",
-      "Id": 2,
+      "name": "Tel Aviv 1",
+      "id": 2,
       "city": "Tel Aviv",
-      "Address": "Queen Shlomziyon St 8",
-      "Capacity": 800,
-      "Current Amount": 300,
-      "Update date": "16.02.2022 17:00:00",
-      "Last Collected": "13.02.2022 16:00:00"
+      "address": "Queen Shlomziyon St 8",
+      "capacity": 800,
+      "currentAmount": 300,
+      "updateDate": "16.02.2022 17:00:00",
+      "lastCollected": "13.02.2022 16:00:00"
     },
     {
-      "Name": "Haifa 1",
-      "Id": 3,
+      "name": "Haifa 1",
+      "id": 3,
       "city": "Haifa",
-      "Address": "Shlomzion Hamalka St 24",
-      "Capacity": 800,
-      "Current Amount": 600,
-      "Update date": "16.02.2022 17:00:00",
-      "Last Collected": "10.02.2022 19:00:00"
+      "address": "Shlomzion Hamalka St 24",
+      "capacity": 800,
+      "currentAmount": 600,
+      "updateDate": "16.02.2022 17:00:00",
+      "lastCollected": "10.02.2022 19:00:00"
     }
   ]
 }
