@@ -6,9 +6,9 @@
       "city": "Jerusalem",
       "Address": "Queen Shlomziyon St 20",
       "Capacity": 800,
-      "Curren Amount": 500,
-      "Update date": "16.02.2022",
-      "Last Collected": "12.02.2022"
+      "Current Amount": 500,
+      "Update date": "16.02.2022 17:00:00",
+      "Last Collected": "12.02.2022 14:00:00"
     },
     {
       "Name": "Tel Aviv 1",
@@ -16,9 +16,9 @@
       "city": "Tel Aviv",
       "Address": "Queen Shlomziyon St 8",
       "Capacity": 800,
-      "Curren Amount": 300,
-      "Update date": "16.02.2022",
-      "Last Collected": "13.02.2022"
+      "Current Amount": 300,
+      "Update date": "16.02.2022 17:00:00",
+      "Last Collected": "13.02.2022 16:00:00"
     },
     {
       "Name": "Haifa 1",
@@ -26,9 +26,9 @@
       "city": "Haifa",
       "Address": "Shlomzion Hamalka St 24",
       "Capacity": 800,
-      "Curren Amount": 600,
-      "Update date": "16.02.2022",
-      "Last Collected": "10.02.2022"
+      "Current Amount": 600,
+      "Update date": "16.02.2022 17:00:00",
+      "Last Collected": "10.02.2022 19:00:00"
     }
   ]
 }
