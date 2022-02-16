@@ -1,12 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import RegistryCatalog from "./components/registryCatalog";
+import Header from "./components/header";
+import NavBar from "./components/navBar";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+          <Header/>
           <RegistryCatalog />
-      </header>
+          <NavBar/>
     </div>
   );
 }
