@@ -1,6 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Typography,Card, Modal,Box } from "@mui/material";
+// import registry from "../data";
+
 import icon_per_75 from "../assests/icon_per_75.png";
 import location_icon from "../assests/location_icon.png";
 
@@ -47,7 +49,6 @@ function BigRegistry(props) {
     </Typography>
   </Box>
 </Modal>
-//  : <div></div> 
 {/* } */}
     
         </>

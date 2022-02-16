@@ -9,7 +9,40 @@ let registry = [
     CurrenAmount: 500,
     Updatedate: "16.02.2022",
     LastCollected: "12.02.2022",
-    Percentage: 50,
+    Percentage: 25,
+  },
+  {
+    Name: "Jaffa 3",
+    Id: 1,
+    city: "Jerusalem",
+    Address: "Queen Shlomziyon St 20",
+    Capacity: 800,
+    CurrenAmount: 500,
+    Updatedate: "16.02.2022",
+    LastCollected: "12.02.2022",
+    Percentage: 75,
+  },
+  {
+    Name: "Jaffa 3",
+    Id: 1,
+    city: "Jerusalem",
+    Address: "Queen Shlomziyon St 20",
+    Capacity: 800,
+    CurrenAmount: 500,
+    Updatedate: "16.02.2022",
+    LastCollected: "12.02.2022",
+    Percentage: 25,
+  },
+  {
+    Name: "Jaffa 3",
+    Id: 1,
+    city: "Jerusalem",
+    Address: "Queen Shlomziyon St 20",
+    Capacity: 800,
+    CurrenAmount: 500,
+    Updatedate: "16.02.2022",
+    LastCollected: "12.02.2022",
+    Percentage: 100,
   },
   {
     Name: "Tel Aviv 1",
@@ -31,18 +64,20 @@ let registry = [
     CurrenAmount: 600,
     Updatedate: "16.02.2022",
     LastCollected: "10.02.2022",
-    Percentage: 50,
+    Percentage: 75,
   },
 ];
-let histroyRegistry = [
-  {
-    Id: 1,
-    ינואר: 400,
-    דצמבר: 600,
-    נובמבר: 500,
-    אוקטובר: 400,
-    ספטמבר: 300,
-  },
+let historyRegistry = [
+  { חודש: 'מאי', סכום: 500},
+  { חודש: 'יוני', סכום: 250},
+  { חודש: 'יולי', סכום: 340},
+  { חודש: 'אוג', סכום: 400},
+  { חודש: 'ספט', סכום: 300},
+  { חודש: 'אוק', סכום: 500},
+  {חודש: 'נוב', סכום: 250},
+  { חודש: 'דצ', סכום: 300},
+  { חודש:'ינואר', סכום: 200},
+
 ];
 export default registry;
-export { histroyRegistry };
+export { historyRegistry };
