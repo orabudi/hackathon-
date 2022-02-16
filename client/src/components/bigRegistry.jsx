@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography } from "@mui/material";
+import { Typography,Card } from "@mui/material";
 import icon_per_75 from "../assests/icon_per_75.png";
 import location_icon from "../assests/location_icon.png";
 function BigRegistry(props) {

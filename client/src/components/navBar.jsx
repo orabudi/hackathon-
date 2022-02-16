@@ -1,6 +1,6 @@
 import React from "react";
 
-function NavBar () {
+function NavBar() {
     return (
         <>
             <div style={{width: '50px', height: "1000px", backgroundColor:'gray'}}>

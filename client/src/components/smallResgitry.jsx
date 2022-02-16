@@ -2,11 +2,17 @@ import React from "react";
 import { useState } from "react";
 import { Card, Typography } from "@mui/material";
 import icon_per_75 from "../assests/icon_per_75.png";
+import BigRegistry from "./bigRegistry";
 function SmallRegistry(props) {
     const [isBigCardShown, setIsBigCardShown] = useState(false)
     console.log(props)
+    function changeBigRegistr() {
+        console.log("hello");
+    }
     return (
-        <>
+        <>  
+            {/* <BigRegistry props = {props} style={{display: isBigCardShown ? 'inline' : 'block' }}/> */}
+            {/* <Card onMouseEnter={setIsBigCardShown(true)} onmouseleave={setIsBigCardShown(false)} sx={{ */}
             <Card sx={{
                 bgcolor: '#F2F2F2',
                 marginLeft: '5px',
@@ -15,9 +21,8 @@ function SmallRegistry(props) {
                 marginBottom: '5px',
                 minHeight: '100px',
                 minWidth: '100px',
-                
-            }}>
-                <Typography>
+            }} >
+                <Typography>    
                     <img src={icon_per_75} style={{maxHeight:'50px', maxWidth:'50px'}} />
                 </Typography>
                 <Typography>
