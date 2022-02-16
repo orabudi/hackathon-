@@ -1,0 +1,43 @@
+{
+  // All sizes are in cm
+  "Boxes": [
+    {
+      "Name": "Jerusalem 1",
+      "city": "Jerusalem",
+      "Location": "Queen Shlomziyon St 20",
+      "height": 11,
+      "width": 8,
+      "Status": 5,
+      "Update date": 
+    },
+    {
+      "Name": "Jerusalem 2",
+      "city": "Jerusalem",
+      "Location": "Israel museum, Rupin st",
+      "height": 11,
+      "width": 8,
+      "Status": 5
+    },
+    {
+      "Name": "Jerusalem 1",
+      "Location": "Queen Shlomziyon St 20, Jerusalem",
+      "height": 11,
+      "width": 8,
+      "Status": 5
+    },
+    {
+      "Name": "Jerusalem 1",
+      "Location": "Queen Shlomziyon St 20, Jerusalem",
+      "height": 11,
+      "width": 8,
+      "Status": 5
+    },
+    {
+      "Name": "Jerusalem 1",
+      "Location": "Queen Shlomziyon St 20, Jerusalem",
+      "height": 11,
+      "width": 8,
+      "Status": 5
+    }
+  ]
+}
