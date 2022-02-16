@@ -4,15 +4,16 @@ import registry from "../data";
 function RegistryCatalog() {
   return (
     <>
-      <div style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            maxWidth: '1500px',
-            
-      }}
-        >
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          width: "85%",
+          justifyContent: "center",
+        }}
+      >
         {registry.map((currRegistry) => {
-            return <SmallRegistry props={currRegistry} />;
+          return <SmallRegistry props={currRegistry} />;
         })}
       </div>
     </>
