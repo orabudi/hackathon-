@@ -53,7 +53,8 @@ function RegistryCatalog() {
         style={{
           display: "flex",
           flexWrap: "wrap",
-          maxWidth: "1500px",
+          width: "85%",
+          justifyContent: "center",
         }}
       >
         {registry.map((currRegistry, index) => {
