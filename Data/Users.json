@@ -1,0 +1,19 @@
+{
+  "Users": [
+    {
+      "Id": "6b86b273",
+      "Name": "RonGoldberg",
+      "Type": "Manager"
+    },
+    {
+      "Id": "d4735e3a2",
+      "Name": "Yohay Splendor",
+      "Type": "Collector"
+    },
+    {
+      "Id": "4e074085",
+      "Name": "Ron Benaccot",
+      "Type": "Administrator"
+    }
+  ]
+}
