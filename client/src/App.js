@@ -6,7 +6,10 @@ import NavBar from "./components/navBar";
 function App() {
   document.body.style.overflow = "hidden"
   return (
-    <div className="App" style={{ height: "100vh" }}>
+    <div
+      className="App"
+      style={{ height: "100vh", backgroundColor: "#ECECEC" }}
+    >
       <Header />
       <div style={{ display: "flex", width: "100%" }}>
         <RegistryCatalog />

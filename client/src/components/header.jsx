@@ -8,6 +8,7 @@ function Header() {
         style={{
           height: "50px",
           width: "100%",
+          backgroundColor: "white",
           boxShadow: "1px 9px 15px 1px rgba(147,147,147,0.48)",
           flexDirection: "row-reverse",
           justifyContent: "flex-end",
