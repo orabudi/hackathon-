@@ -24,10 +24,11 @@ function Header() {
             padding: "20px",
             color: "#4F2270",
             textAlign: "right",
+            fontWeight: "bold",
             width: "10%",
           }}
         >
-          שלום אור עבודי
+          ! שלום אור עבודי
         </div>
         <div style={{ width: "75%" }}></div>
       </div>

@@ -1,9 +1,17 @@
 import React from "react";
-import bank_icon from "../assests/icon_per_0.png";
-import dashboard_icon from "../assests/dashboard_icon.png";
+import bank_icon from "../assests/white_money_box.png";
+import dashboard_icon from "../assests/whitw_dashboard_icon.png";
+import ".././App.css";
 
 function changeBackground(e) {
   e.target.style.background = "#7030A0";
+}
+
+function MouseEnter(event) {
+  event.target.style.background = "#7131A1";
+}
+function MouseLeave(event) {
+  event.target.style.background = "";
 }
 
 function NavBar() {
@@ -21,6 +29,8 @@ function NavBar() {
         }}
       >
         <div
+          onMouseEnter={MouseEnter}
+          onMouseLeave={MouseLeave}
           style={{
             padding: "20px",
             color: "white",
@@ -37,6 +47,8 @@ function NavBar() {
         </div>
 
         <div
+          onMouseEnter={MouseEnter}
+          onMouseLeave={MouseLeave}
           style={{
             padding: "20px",
             color: "white",
