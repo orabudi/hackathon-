@@ -12,6 +12,8 @@ import logo from "../assests/main_logo.png";
 import time_icon from "../assests/time_icon.png";
 import cash_icon from "../assests/cash_icon.png";
 import city_icon from "../assests/city_icon.png";
+import graph1 from "../assests/graph1.png";
+import graph2 from "../assests/graph2.png";
 
 import registry, { historyRegistry } from "../data";
 import BigRegistry from "./bigRegistry";
@@ -33,7 +35,7 @@ function RegistryCatalog() {
   const [currentMonthInput, setCurrentMonthInput] = useState(0);
   const [moneyAvreage, setMoneyAvreage] = useState(300);
   const [history, setHistroy] = useState(historyRegistry);
-  const [statsMode, setStatsMode] = useState(true);
+  const [statsMode, setStatsMode] = useState(false);
   const handleMouseOver = () => {
     console.log("hlellop");
   };
@@ -103,7 +105,11 @@ function RegistryCatalog() {
                   <ArgumentAxis />
                   <ValueAxis />
 
-                  <LineSeries valueField="סכום" argumentField="חודש" />
+                  <LineSeries
+                    valueField="סכום"
+                    argumentField="חודש"
+                    color="#7131A1"
+                  />
                 </Chart>
               </Typography>
               <br />
@@ -164,86 +170,148 @@ function RegistryCatalog() {
             marginTop: "15px",
           }}
         >
-          <Card
-            sx={{
-              bgcolor: "#F2F2F2",
-              marginLeft: "5px",
-              marginRight: "5px",
-              marginTop: "5px",
-              marginBottom: "5px",
-              height: "35vh",
-              width: "20vw",
-              borderRadius: "25px",
-              boxShadow: "1px 2px 4px 1px #CECECE",
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              flexDirection: "column",
             }}
           >
-            <img
-              src={cash_icon}
-              style={{ height: "60px", width: "60px", padding: "12px" }}
-            />
-            <Typography
-              style={{
-                fontSize: "30px",
-                fontFamily: "Assistant",
-                fontWeight: "bold",
-                textAlign: "center",
-                color: "#4F2270",
+            <Card
+              sx={{
+                bgcolor: "#F2F2F2",
+                marginLeft: "5px",
+                marginRight: "5px",
+                marginTop: "5px",
+                marginBottom: "5px",
+                height: "35vh",
+                width: "20vw",
+                borderRadius: "25px",
+                boxShadow: "1px 2px 4px 1px #CECECE",
               }}
             >
-              23,901
-            </Typography>
-            <Typography
-              style={{
-                fontSize: "20px",
-                fontFamily: "Assistant",
-                textAlign: "center",
-                color: "gray",
-              }}
-            >
-              סכום שנאסף
-            </Typography>
-          </Card>
+              <img
+                src={cash_icon}
+                style={{ height: "60px", width: "60px", padding: "12px" }}
+              />
+              <Typography
+                style={{
+                  fontSize: "30px",
+                  fontFamily: "Assistant",
+                  fontWeight: "bold",
+                  textAlign: "center",
+                  color: "#4F2270",
+                }}
+              >
+                23,901
+              </Typography>
+              <Typography
+                style={{
+                  fontSize: "20px",
+                  fontFamily: "Assistant",
+                  textAlign: "center",
+                  color: "gray",
+                }}
+              >
+                סכום שנאסף
+              </Typography>
+            </Card>
 
-          <Card
-            sx={{
-              bgcolor: "#F2F2F2",
-              marginLeft: "5px",
-              marginRight: "5px",
-              marginTop: "5px",
-              marginBottom: "5px",
-              height: "35vh",
-              width: "20vw",
-              borderRadius: "25px",
-              boxShadow: "1px 2px 4px 1px #CECECE",
-            }}
-          >
-            <img
-              src={time_icon}
-              style={{ height: "60px", width: "60px", padding: "12px" }}
-            />
-            <Typography
-              style={{
-                fontSize: "30px",
-                fontFamily: "Assistant",
-                fontWeight: "bold",
-                textAlign: "center",
-                color: "#4F2270",
-                direction: "rtl",
+            <Card
+              sx={{
+                bgcolor: "#F2F2F2",
+                marginLeft: "5px",
+                marginRight: "5px",
+                marginTop: "5px",
+                marginBottom: "5px",
+                height: "35vh",
+                width: "20vw",
+                borderRadius: "25px",
+                boxShadow: "1px 2px 4px 1px #CECECE",
               }}
             >
-              3 ימים ושעתיים
-            </Typography>
-            <Typography
-              style={{
-                fontSize: "20px",
-                fontFamily: "Assistant",
-                textAlign: "center",
-                color: "gray",
+              <img
+                src={graph2}
+                style={{
+                  height: "85%",
+                  width: "95%",
+                  //padding: "12px",
+                  marginTop: "10px",
+                  justifyContent: "center",
+                  //marginRight: "10px",
+                }}
+              />
+            </Card>
+          </div>
+
+          <div>
+            <Card
+              sx={{
+                bgcolor: "#F2F2F2",
+                marginLeft: "5px",
+                marginRight: "5px",
+                marginTop: "5px",
+                marginBottom: "5px",
+                height: "35vh",
+                width: "20vw",
+                borderRadius: "25px",
+                boxShadow: "1px 2px 4px 1px #CECECE",
               }}
             >
-              זמן ממוצע למילוי קופה
-            </Typography>
-          </Card>
+              <img
+                src={time_icon}
+                style={{ height: "60px", width: "60px", padding: "12px" }}
+              />
+              <Typography
+                style={{
+                  fontSize: "30px",
+                  fontFamily: "Assistant",
+                  fontWeight: "bold",
+                  textAlign: "center",
+                  color: "#4F2270",
+                  direction: "rtl",
+                }}
+              >
+                3 ימים ושעתיים
+              </Typography>
+              <Typography
+                style={{
+                  fontSize: "20px",
+                  fontFamily: "Assistant",
+                  textAlign: "center",
+                  color: "gray",
+                }}
+              >
+                זמן ממוצע למילוי קופה
+              </Typography>
+            </Card>
+
+            <Card
+              sx={{
+                bgcolor: "#F2F2F2",
+                marginLeft: "5px",
+                marginRight: "5px",
+                marginTop: "10px",
+                marginBottom: "5px",
+                height: "35vh",
+                width: "20vw",
+                borderRadius: "25px",
+                boxShadow: "1px 2px 4px 1px #CECECE",
+              }}
+            >
+              <img
+                src={graph1}
+                style={{
+                  height: "85%",
+                  width: "95%",
+                  //padding: "12px",
+                  marginTop: "10px",
+                  justifyContent: "center",
+                  //marginRight: "10px",
+                }}
+              />
+            </Card>
+          </div>
 
           <Card
             sx={{
@@ -275,7 +343,7 @@ function RegistryCatalog() {
               style={{
                 fontSize: "20px",
                 fontFamily: "Assistant",
-                color: "'white'",
+                color: "white",
                 backgroundColor: "#4F2270",
                 width: "80%",
                 //textAlign: "center",
@@ -292,7 +360,7 @@ function RegistryCatalog() {
               style={{
                 fontSize: "20px",
                 fontFamily: "Assistant",
-                color: "'white'",
+                color: "white",
                 backgroundColor: "#4F2270",
                 width: "80%",
                 //textAlign: "center",

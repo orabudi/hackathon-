@@ -16,6 +16,12 @@ const imgDict = {
   75: icon_per_75,
   100: icon_per_100,
 };
+function MouseEnter(event) {
+  event.target.style.background = "#7131A1";
+}
+function MouseLeave(event) {
+  event.target.style.background = "";
+}
 function SmallRegistry(props) {
   return (
     <>
