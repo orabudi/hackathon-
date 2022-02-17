@@ -19,7 +19,7 @@ const style = {
   width: 400,
   height: 450,
   bgcolor: "background.paper",
-  border: "2px solid #000",
+  borderRadius: "30px",
   boxShadow: 24,
   p: 4,
 };
@@ -28,7 +28,7 @@ function RegistryCatalog() {
   const [currentDisplayRegistry, setCurrentDisplayRegistry] = useState(-1);
   const [currentMonthInput, setCurrentMonthInput] = useState(0);
   const [moneyAvreage, setMoneyAvreage] = useState(300);
-  const [history, setHistroy] = useState(historyRegistry)
+  const [history, setHistroy] = useState(historyRegistry);
   const handleMouseOver = () => {
     console.log("hlellop");
   };
@@ -36,16 +36,18 @@ function RegistryCatalog() {
     console.log("id", id);
     setCurrentDisplayRegistry(id);
     console.log("currentDisplayRegistry", currentDisplayRegistry);
-
   };
   const handleInputBtn = () => {
-      setHistroy([...history, {
-          "חודש": 'פבר',
-          "סכום": currentMonthInput
-      }]);
-      setCurrentMonthInput(0);
-      setMoneyAvreage(375);
-  }
+    setHistroy([
+      ...history,
+      {
+        חודש: "פבר",
+        סכום: currentMonthInput,
+      },
+    ]);
+    setCurrentMonthInput(0);
+    setMoneyAvreage(375);
+  };
 
   return (
     <>
@@ -80,11 +82,17 @@ function RegistryCatalog() {
           aria-describedby="modal-modal-description"
         >
           <Box sx={style}>
-            <Typography id="modal-modal-title" variant="h6" component="h2" textAlign={"center"}>
+            <Typography
+              style={{ fontFamily: "Assistant", fontWeight: "bold" }}
+              id="modal-modal-title"
+              variant="h6"
+              component="h2"
+              textAlign={"center"}
+            >
               קופה מספר 2
             </Typography>
-            <Typography id="modal-modal-description"  wisx={{ mt: 2 }}>
-              <Chart data={history} height={300} color={"#7131A1"}>
+            <Typography id="modal-modal-description" wisx={{ mt: 2 }}>
+              <Chart data={history} height={300} color={"red"}>
                 <ArgumentAxis />
                 <ValueAxis />
 
@@ -92,17 +100,46 @@ function RegistryCatalog() {
               </Chart>
             </Typography>
             <br />
-            <Typography id="modal-modal-description" style={{direction:"rtl"}}  wisx={{ mt: 2 }}>
-                ממוצע הסכום שנאסף: {moneyAvreage} &#x20aa;
+            <Typography
+              id="modal-modal-description"
+              style={{ direction: "rtl", fontFamily: "Assistant" }}
+              wisx={{ mt: 2 }}
+            >
+              ממוצע הסכום שנאסף: {moneyAvreage} &#x20aa;
             </Typography>
             <br />
-            <Typography id="modal-modal-description" style={{direction:"rtl"}}  wisx={{ mt: 2 }}>
-                עדכן חודש נוכחי:
-                <TextField id="filled-basic" value={currentMonthInput} variant="standard" onChange={evt => setCurrentMonthInput(evt.target.value)} type={"number"} style={{maxHeight: '10px', fontSize: '10px'}}/> 
-                
-                <Button variant="filled" onClick={handleInputBtn} style={{background:"#7131A1", color: 'white', marginRight: '5px'}}>
-                    עדכן
-                </Button>
+            <Typography
+              id="modal-modal-description"
+              style={{ direction: "rtl", fontFamily: "Assistant" }}
+              wisx={{ mt: 2 }}
+            >
+              עדכן חודש נוכחי:
+              <TextField
+                id="filled-basic"
+                value={currentMonthInput}
+                variant="standard"
+                onChange={(evt) => setCurrentMonthInput(evt.target.value)}
+                type={"number"}
+                style={{
+                  maxHeight: "10px",
+                  fontSize: "10px",
+                  fontFamily: "Assistant",
+                }}
+              />
+              <Button
+                variant="filled"
+                onClick={handleInputBtn}
+                style={{
+                  backgroundColor: "#7131A1",
+                  fontSize: "15px",
+                  fontFamily: "Assistant",
+                  fontWeight: "bold",
+                  borderRadius: "20px",
+                  color: "white",
+                }}
+              >
+                עדכן
+              </Button>
             </Typography>
           </Box>
         </Modal>

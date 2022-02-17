@@ -5,7 +5,10 @@ import Header from "./components/header";
 import NavBar from "./components/navBar";
 function App() {
   return (
-    <div className="App" style={{ height: "100vh" }}>
+    <div
+      className="App"
+      style={{ height: "100vh", backgroundColor: "#ECECEC" }}
+    >
       <Header />
       <div style={{ display: "flex", width: "100%" }}>
         <RegistryCatalog />
