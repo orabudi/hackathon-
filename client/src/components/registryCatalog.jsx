@@ -30,13 +30,17 @@ function RegistryCatalog() {
   const [currentMonthInput, setCurrentMonthInput] = useState(0);
   const [moneyAvreage, setMoneyAvreage] = useState(300);
   const [history, setHistroy] = useState(historyRegistry);
-  const [statsMode,setStatsMode] = useState(true);
+  const [statsMode, setStatsMode] = useState(false);
+//   const [registryData, setRegistryData] = useSt
   const handleMouseOver = () => {
     console.log("hlellop");
   };
   const handleClick = (id) => {
     console.log("id", id);
     setCurrentDisplayRegistry(id);
+    // window.setTimeout(() => {
+    //     setCurrentDisplayRegistry(id);
+    // },1500)
     console.log("currentDisplayRegistry", currentDisplayRegistry);
   };
   const handleInputBtn = () => {
@@ -53,111 +57,129 @@ function RegistryCatalog() {
 
   return (
     <>
-        {!statsMode ? 
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          width: "85%",
-          justifyContent: "center",
-          maxHeight: '85vh'
-        }}
-      >
-        {registry.map((currRegistry, index) => {
-          return (
-            <>
-              <div
-                onClick={() => {
-                  handleClick(currRegistry.Id);
-                }}
-              >
-                <SmallRegistry props={currRegistry} key={index} />
-              </div>
-              {/* /> */}
-            </>
-          );
-        })}
-        <Modal
-          open={currentDisplayRegistry !== -1}
-          onClose={() => {
-            setCurrentDisplayRegistry(-1);
-          }}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-        >
-          <Box sx={style}>
-            <Typography
-              style={{ fontFamily: "Assistant", fontWeight: "bold" }}
-              id="modal-modal-title"
-              variant="h6"
-              component="h2"
-              textAlign={"center"}
+      {!statsMode ? (
+        <div style={{marginTop: '2vh'}}>
+          <Button 
+          style={{ fontSize: "15px",
+                      fontFamily: "Assistant",
+                      fontWeight: "bold",borderRadius: "20px",
+                      background: '#7131A1',marginBottom: '1vh',
+                      top: 0, left: '30vw', position: "relative"}} 
+                      variant="contained">מוכן לאיסוף</Button>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              width: "85%",
+              justifyContent: "center",
+              maxHeight: "85vh",
+            }}
+          >
+            {registry.map((currRegistry, index) => {
+              return (
+                <>
+                  <div
+                    onClick={() => {
+                      handleClick(currRegistry.Id);
+                    }}
+                  >
+                    <SmallRegistry props={currRegistry} handleCloseModal={() => setCurrentDisplayRegistry(-1)
+                    } key={index} />
+                  </div>
+                  {/* /> */}
+                </>
+              );
+            })}
+            <Modal
+              open={currentDisplayRegistry !== -1}
+              onClose={() => {
+                setCurrentDisplayRegistry(-1);
+              }}
+              aria-labelledby="modal-modal-title"
+              aria-describedby="modal-modal-description"
             >
-              קופה מספר 2
-            </Typography>
-            <Typography id="modal-modal-description" wisx={{ mt: 2 }}>
-              <Chart data={history} height={300} color={"red"}>
-                <ArgumentAxis />
-                <ValueAxis />
+              <Box sx={style}>
+                <Typography
+                  style={{ fontFamily: "Assistant", fontWeight: "bold" }}
+                  id="modal-modal-title"
+                  variant="h6"
+                  component="h2"
+                  textAlign={"center"}
+                >
+                  קופה מספר 2
+                </Typography>
+                <Typography id="modal-modal-description" wisx={{ mt: 2 }}>
+                  <Chart data={history} height={300} color={"red"}>
+                    <ArgumentAxis />
+                    <ValueAxis />
 
-                <LineSeries valueField="סכום" argumentField="חודש" />
-              </Chart>
-            </Typography>
-            <br />
-            <Typography
-              id="modal-modal-description"
-              style={{ direction: "rtl", fontFamily: "Assistant" }}
-              wisx={{ mt: 2 }}
-            >
-              ממוצע הסכום שנאסף: {moneyAvreage} &#x20aa;
-            </Typography>
-            <br />
-            <Typography
-              id="modal-modal-description"
-              style={{ direction: "rtl", fontFamily: "Assistant" }}
-              wisx={{ mt: 2 }}
-            >
-              עדכן חודש נוכחי:
-              <TextField
-                id="filled-basic"
-                value={currentMonthInput}
-                variant="standard"
-                onChange={(evt) => setCurrentMonthInput(evt.target.value)}
-                type={"number"}
-                style={{
-                  maxHeight: "10px",
-                  fontSize: "10px",
-                  fontFamily: "Assistant",
-                }}
-              />
-              <Button
-                variant="filled"
-                onClick={handleInputBtn}
-                style={{
-                  backgroundColor: "#7131A1",
-                  fontSize: "15px",
-                  fontFamily: "Assistant",
-                  fontWeight: "bold",
-                  borderRadius: "20px",
-                  color: "white",
-                }}
-              >
-                עדכן
-              </Button>
-            </Typography>
-          </Box>
-        </Modal>
-      </div>
-      : <></> }
-      {
-          statsMode ? <div> 
-
-          </div>: <div></div>
-      }
+                    <LineSeries valueField="סכום" argumentField="חודש" />
+                  </Chart>
+                </Typography>
+                <br />
+                <Typography
+                  id="modal-modal-description"
+                  style={{ direction: "rtl", fontFamily: "Assistant" }}
+                  wisx={{ mt: 2 }}
+                >
+                  ממוצע הסכום שנאסף: {moneyAvreage} &#x20aa;
+                </Typography>
+                <br />
+                <Typography
+                  id="modal-modal-description"
+                  style={{ direction: "rtl", fontFamily: "Assistant" }}
+                  wisx={{ mt: 2 }}
+                >
+                  עדכן חודש נוכחי:
+                  <TextField
+                    id="filled-basic"
+                    value={currentMonthInput}
+                    variant="standard"
+                    onChange={(evt) => setCurrentMonthInput(evt.target.value)}
+                    type={"number"}
+                    style={{
+                      maxHeight: "10px",
+                      fontSize: "10px",
+                      fontFamily: "Assistant",
+                    }}
+                  />
+                  <Button
+                    variant="filled"
+                    onClick={handleInputBtn}
+                    style={{
+                      backgroundColor: "#7131A1",
+                      fontSize: "15px",
+                      fontFamily: "Assistant",
+                      fontWeight: "bold",
+                      borderRadius: "20px",
+                      color: "white",
+                    }}
+                  >
+                    עדכן
+                  </Button>
+                </Typography>
+              </Box>
+            </Modal>
+          </div>
+        </div>
+      ) : (
+        <></>
+      )}
+      {statsMode ? <div></div> : <div></div>}
       {/* <div id="statsMode" display={statsMode ? 'inline' : 'none'}>
           hello
       </div> */}
-        <img src={logo} onClick={() => setStatsMode(!statsMode)} style={{position: "fixed", bottom: "0px", left: "0px",width: "100px", height:"100px"}}  />
+      <img
+        src={logo}
+        onClick={() => setStatsMode(!statsMode)}
+        style={{
+          position: "fixed",
+          bottom: "0px",
+          left: "0px",
+          width: "100px",
+          height: "100px",
+        }}
+      />
     </>
   );
 }
