@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { Button, Card, Typography } from "@mui/material";
 import icon_per_75 from "../assests/icon_per_75.png";
@@ -23,6 +23,14 @@ function MouseLeave(event) {
   event.target.style.background = "";
 }
 function SmallRegistry(props) {
+    const [dataState, setDataState] = useState(props.props);
+    useEffect(() => {
+        setDataState(props.props)
+    }, [props.props])
+    function handleCollected() {
+        props.handleCloseModal();
+        // setDataState({...dataState, Updatedate: "17.02.2022", Percentage: 0})
+    }
   return (
     <>
       <Card
@@ -40,7 +48,7 @@ function SmallRegistry(props) {
       >
         <Typography>
           <img
-            src={imgDict[props.props.Percentage]}
+            src={imgDict[dataState.Percentage]}
             style={{ maxHeight: "70px", maxWidth: "70px" }}
           />
         </Typography>
@@ -52,7 +60,7 @@ function SmallRegistry(props) {
             color: "#4F2270",
           }}
         >
-          {props.props.Percentage}%
+          {dataState.Percentage}%
         </Typography>
         <Typography
           style={{
@@ -63,7 +71,7 @@ function SmallRegistry(props) {
             display: "flex",
           }}
         >
-          {props.props.city}, {props.props.Address}
+          {dataState.city}, {dataState.Address}
           <img
             src={location}
             style={{
@@ -83,17 +91,13 @@ function SmallRegistry(props) {
             display: "flex",
           }}
         >
-          {props.props.Updatedate}
+          {dataState.Updatedate}
           עודכן ב
           <img
             src={updated_icom}
             style={{ height: "20px", width: "20px", paddingRight: "12px" }}
           />
         </Typography>
-        {/* <Typography style={{ fontSize: "15px", fontFamily: "Assistant" }}>
-          מזהה קופה:
-          {props.props.Id}
-        </Typography> */}
         <Typography>
           <Button
             style={{
@@ -106,6 +110,28 @@ function SmallRegistry(props) {
             variant="contained"
           >
             התראה
+          </Button>
+          <Button
+            onClick={
+              
+              () => {
+                  // props.handleCloseModal()
+                setDataState({...dataState, Updatedate: "17.02.2022", Percentage: 0});
+            }
+                // props.handleCloseModal();
+                }
+            
+            style={{       
+              backgroundColor: "#7131A1",
+              fontSize: "15px",
+              fontFamily: "Assistant",
+              fontWeight: "bold",
+              borderRadius: "20px",
+              marginLeft: '5px'
+            }}
+            variant="contained"
+          >
+            אספתי
           </Button>
         </Typography>
       </Card>

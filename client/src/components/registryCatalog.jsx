@@ -42,6 +42,9 @@ function RegistryCatalog() {
   const handleClick = (id) => {
     console.log("id", id);
     setCurrentDisplayRegistry(id);
+    // window.setTimeout(() => {
+    //     setCurrentDisplayRegistry(id);
+    // },1500)
     console.log("currentDisplayRegistry", currentDisplayRegistry);
   };
   const handleInputBtn = () => {
