@@ -1,5 +1,5 @@
 import React from "react";
-import bank_icon from "../assests/money_box.png";
+import bank_icon from "../assests/icon_per_0.png";
 import dashboard_icon from "../assests/dashboard_icon.png";
 
 function changeBackground(e) {

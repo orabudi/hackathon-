@@ -4,6 +4,7 @@ import RegistryCatalog from "./components/registryCatalog";
 import Header from "./components/header";
 import NavBar from "./components/navBar";
 function App() {
+  document.body.style.overflow = "hidden"
   return (
     <div className="App" style={{ height: "100vh" }}>
       <Header />

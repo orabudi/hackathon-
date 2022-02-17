@@ -8,6 +8,7 @@ import {
   Chart,
   LineSeries,
 } from "@devexpress/dx-react-chart-material-ui";
+import logo from "../assests/main_logo.png";
 
 import registry, { historyRegistry } from "../data";
 import BigRegistry from "./bigRegistry";
@@ -28,7 +29,8 @@ function RegistryCatalog() {
   const [currentDisplayRegistry, setCurrentDisplayRegistry] = useState(-1);
   const [currentMonthInput, setCurrentMonthInput] = useState(0);
   const [moneyAvreage, setMoneyAvreage] = useState(300);
-  const [history, setHistroy] = useState(historyRegistry)
+  const [history, setHistroy] = useState(historyRegistry);
+  const [statsMode,setStatsMode] = useState(true);
   const handleMouseOver = () => {
     console.log("hlellop");
   };
@@ -49,12 +51,14 @@ function RegistryCatalog() {
 
   return (
     <>
+        {!statsMode ? 
       <div
         style={{
           display: "flex",
           flexWrap: "wrap",
           width: "85%",
           justifyContent: "center",
+          maxHeight: '85vh'
         }}
       >
         {registry.map((currRegistry, index) => {
@@ -107,6 +111,16 @@ function RegistryCatalog() {
           </Box>
         </Modal>
       </div>
+      : <></> }
+      {
+          statsMode ? <div> 
+
+          </div>: <div></div>
+      }
+      {/* <div id="statsMode" display={statsMode ? 'inline' : 'none'}>
+          hello
+      </div> */}
+        <img src={logo} onClick={() => setStatsMode(!statsMode)} style={{position: "fixed", bottom: "0px", left: "0px",width: "100px", height:"100px"}}  />
     </>
   );
 }
